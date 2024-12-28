@@ -153,11 +153,15 @@ pip install -r requirements.txt
 
 ###  Usage
 Run roadmap-unit-converter using the following command:
-**Using `pip`** &nbsp; [<img align="center" src="" />]()
+**Using `flask`** &nbsp;
 
 ```sh
-❯ echo 'INSERT-RUN-COMMAND-HERE'
+flask run
+# or
+python -m flask run
 ```
+
+The application will start and be available at `http://127.0.0.1:5000/` in your web browser.
 
 
 ###  Testing
