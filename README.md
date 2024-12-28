@@ -283,5 +283,5 @@ This project is protected under the [MIT License](https://choosealicense.com/lic
 ##  Acknowledgments
 
 - Made as a Roadmap.sh project: https://roadmap.sh/projects/unit-converter
-- If you like the project, please visit: https://roadmap.sh/projects/unit-converter/solutions?u=6755306aecc889bb0d36cf17
+- If you like the project, please visit and give a thumbs up at: https://roadmap.sh/projects/unit-converter/solutions?u=6755306aecc889bb0d36cf17
 ---
