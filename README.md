@@ -1,71 +1,238 @@
-# Unit Converter Web Application
+<div align="left" style="position: relative;">
+<img src="https://img.icons8.com/?size=512&id=55494&format=png" align="right" width="30%" style="margin: -20px 0 0 20px;">
+<h1>ROADMAP-UNIT-CONVERTER</h1>
+<p align="left">
+	<em>A versatile web-based unit conversion tool built with Flask that handles length, weight, and temperature conversions</em>
+</p>
+<p align="left">
+	<img src="https://img.shields.io/github/license/P-Nelly/roadmap-unit-converter?style=default&logo=opensourceinitiative&logoColor=white&color=0080ff" alt="license">
+	<img src="https://img.shields.io/github/last-commit/P-Nelly/roadmap-unit-converter?style=default&logo=git&logoColor=white&color=0080ff" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/P-Nelly/roadmap-unit-converter?style=default&color=0080ff" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/P-Nelly/roadmap-unit-converter?style=default&color=0080ff" alt="repo-language-count">
+</p>
+<p align="left"><!-- default option, no dependency badges. -->
+</p>
+<p align="left">
+	<!-- default option, no dependency badges. -->
+</p>
+</div>
+<br clear="right">
 
-A simple web application that allows users to convert between different units of measurement including length, weight, and temperature.
+##  Table of Contents
 
-## Features
+- [ Overview](#overview)
+- [ Features](#features)
+- [ Project Structure](#project-structure)
+  - [ Project Index](#project-index)
+- [ Getting Started](#getting-started)
+  - [ Prerequisites](#prerequisites)
+  - [ Installation](#installation)
+  - [ Usage](#usage)
+  - [ Testing](#testing)
+- [ Project Roadmap](#project-roadmap)
+- [ Contributing](#contributing)
+- [ License](#license)
+- [ Acknowledgments](#acknowledgments)
 
-- Convert between different units of length (millimeter, centimeter, meter, kilometer, inch, foot, yard, mile)
-- Convert between different units of weight (milligram, gram, kilogram, ounce, pound)
-- Convert between different units of temperature (Celsius, Fahrenheit, Kelvin)
-- Clean and responsive user interface
-- Real-time conversion results
+---
 
-## Requirements
+##  Overview
 
-- Python 3.7+
-- Flask 2.3.3
-- Werkzeug 2.3.7
+A Flask-based web application that provides an intuitive interface for converting between different units of measurement. The application supports conversions for length (e.g., meters to feet), weight (e.g., kilograms to pounds), and temperature (e.g., Celsius to Fahrenheit).
 
-## Installation
+---
 
-1. Clone this repository:
-```bash
-git clone <repository-url>
-cd <repository-directory>
+##  Features
+
+- **Length Conversion**: Convert between millimeters, centimeters, meters, kilometers, inches, feet, yards, and miles
+- **Weight Conversion**: Convert between milligrams, grams, kilograms, ounces, and pounds
+- **Temperature Conversion**: Convert between Celsius, Fahrenheit, and Kelvin
+- **User-Friendly Interface**: Clean and responsive design with easy-to-use forms
+- **Real-Time Conversion**: Instant results displayed after submission
+- **Mobile-Responsive**: Works seamlessly on both desktop and mobile devices
+
+---
+
+##  Project Structure
+
+```sh
+└── roadmap-unit-converter/
+    ├── LICENSE
+    ├── README.md
+    ├── app.py
+    ├── requirements.txt
+    └── templates
+        ├── base.html
+        ├── index.html
+        ├── length.html
+        ├── temperature.html
+        └── weight.html
 ```
 
-2. Create a virtual environment (optional but recommended):
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows, use: venv\Scripts\activate
+
+###  Project Index
+<details open>
+	<summary><b><code>ROADMAP-UNIT-CONVERTER/</code></b></summary>
+	<details> <!-- __root__ Submodule -->
+		<summary><b>__root__</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/app.py'>app.py</a></b></td>
+				<td>Main Flask application file containing conversion logic and route handlers</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/requirements.txt'>requirements.txt</a></b></td>
+				<td>Project dependencies including Flask 2.3.3 and Werkzeug 2.3.7</td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+	<details> <!-- templates Submodule -->
+		<summary><b>templates</b></summary>
+		<blockquote>
+			<table>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/templates/base.html'>base.html</a></b></td>
+				<td>Base template with common layout and styling</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/templates/index.html'>index.html</a></b></td>
+				<td>Homepage with conversion type selection</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/templates/length.html'>length.html</a></b></td>
+				<td>Length conversion form template</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/templates/temperature.html'>temperature.html</a></b></td>
+				<td>Temperature conversion form template</td>
+			</tr>
+			<tr>
+				<td><b><a href='https://github.com/P-Nelly/roadmap-unit-converter/blob/master/templates/weight.html'>weight.html</a></b></td>
+				<td>Weight conversion form template</td>
+			</tr>
+			</table>
+		</blockquote>
+	</details>
+</details>
+
+---
+##  Getting Started
+
+###  Prerequisites
+
+Before getting started with roadmap-unit-converter, ensure your runtime environment meets the following requirements:
+
+- **Python**: Version 3.6 or higher
+- **Package Manager**: Pip
+- **Web Browser**: Any modern web browser
+
+
+###  Installation
+
+Install roadmap-unit-converter using the following methods:
+
+1. Clone the roadmap-unit-converter repository:
+```sh
+❯ git clone https://github.com/P-Nelly/roadmap-unit-converter
 ```
 
-3. Install the required packages:
-```bash
-pip install -r requirements.txt
+2. Navigate to the project directory:
+```sh
+❯ cd roadmap-unit-converter
 ```
 
-## Running the Application
+3. Install the project dependencies:
 
-1. Start the Flask development server:
-```bash
-python app.py
+
+**Using `pip`** &nbsp; [<img align="center" src="" />]()
+
+```sh
+❯ echo 'INSERT-INSTALL-COMMAND-HERE'
 ```
 
-2. Open your web browser and navigate to:
+
+
+
+###  Usage
+Run roadmap-unit-converter using the following command:
+**Using `pip`** &nbsp; [<img align="center" src="" />]()
+
+```sh
+❯ echo 'INSERT-RUN-COMMAND-HERE'
 ```
-http://localhost:5000
+
+
+###  Testing
+Run the test suite using the following command:
+**Using `pip`** &nbsp; [<img align="center" src="" />]()
+
+```sh
+❯ echo 'INSERT-TEST-COMMAND-HERE'
 ```
 
-## Usage
 
-1. Select the type of conversion you want to perform (length, weight, or temperature)
-2. Enter the value you want to convert
-3. Select the unit you want to convert from
-4. Select the unit you want to convert to
-5. Click the "Convert" button to see the result
+---
+##  Project Roadmap
 
-## Project Structure
+- [X] **`Task 1`**: <strike>Implement feature one.</strike>
+- [ ] **`Task 2`**: Implement feature two.
+- [ ] **`Task 3`**: Implement feature three.
 
-```
-unit-converter/
-├── app.py              # Main Flask application
-├── requirements.txt    # Python dependencies
-├── README.md          # This file
-└── templates/         # HTML templates
-    ├── base.html      # Base template with common structure
-    ├── index.html     # Home page
-    ├── length.html    # Length conversion page
-    ├── weight.html    # Weight conversion page
-    └── temperature.html # Temperature conversion page
-``` 
+---
+
+##  Contributing
+
+- **💬 [Join the Discussions](https://github.com/P-Nelly/roadmap-unit-converter/discussions)**: Share your insights, provide feedback, or ask questions.
+- **🐛 [Report Issues](https://github.com/P-Nelly/roadmap-unit-converter/issues)**: Submit bugs found or log feature requests for the `roadmap-unit-converter` project.
+- **💡 [Submit Pull Requests](https://github.com/P-Nelly/roadmap-unit-converter/blob/main/CONTRIBUTING.md)**: Review open PRs, and submit your own PRs.
+
+<details closed>
+<summary>Contributing Guidelines</summary>
+
+1. **Fork the Repository**: Start by forking the project repository to your github account.
+2. **Clone Locally**: Clone the forked repository to your local machine using a git client.
+   ```sh
+   git clone https://github.com/P-Nelly/roadmap-unit-converter
+   ```
+3. **Create a New Branch**: Always work on a new branch, giving it a descriptive name.
+   ```sh
+   git checkout -b new-feature-x
+   ```
+4. **Make Your Changes**: Develop and test your changes locally.
+5. **Commit Your Changes**: Commit with a clear message describing your updates.
+   ```sh
+   git commit -m 'Implemented new feature x.'
+   ```
+6. **Push to github**: Push the changes to your forked repository.
+   ```sh
+   git push origin new-feature-x
+   ```
+7. **Submit a Pull Request**: Create a PR against the original project repository. Clearly describe the changes and their motivations.
+8. **Review**: Once your PR is reviewed and approved, it will be merged into the main branch. Congratulations on your contribution!
+</details>
+
+<details closed>
+<summary>Contributor Graph</summary>
+<br>
+<p align="left">
+   <a href="https://github.com{/P-Nelly/roadmap-unit-converter/}graphs/contributors">
+      <img src="https://contrib.rocks/image?repo=P-Nelly/roadmap-unit-converter">
+   </a>
+</p>
+</details>
+
+---
+
+##  License
+
+This project is protected under the [MIT License](https://choosealicense.com/licenses/mit/). For more details, refer to the [LICENSE](LICENSE) file.
+
+---
+
+##  Acknowledgments
+
+- List any resources, contributors, inspiration, etc. here.
+
+---
