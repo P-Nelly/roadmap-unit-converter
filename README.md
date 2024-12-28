@@ -135,21 +135,17 @@ Install roadmap-unit-converter using the following methods:
 
 1. Clone the roadmap-unit-converter repository:
 ```sh
-❯ git clone https://github.com/P-Nelly/roadmap-unit-converter
+git clone https://github.com/P-Nelly/roadmap-unit-converter
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd roadmap-unit-converter
+cd roadmap-unit-converter
 ```
 
 3. Install the project dependencies:
-
-
-**Using `pip`** &nbsp; [<img align="center" src="" />]()
-
 ```sh
-❯ echo 'INSERT-INSTALL-COMMAND-HERE'
+pip install -r requirements.txt
 ```
 
 
@@ -165,20 +161,69 @@ Run roadmap-unit-converter using the following command:
 
 
 ###  Testing
-Run the test suite using the following command:
-**Using `pip`** &nbsp; [<img align="center" src="" />]()
+Run the test suite using the following commands:
+
+1. Install testing dependencies:
 
 ```sh
-❯ echo 'INSERT-TEST-COMMAND-HERE'
+pip install pytest pytest-flask coverage
 ```
 
+2. Run tests with coverage:
+```sh
+coverage run -m pytest tests/
+coverage report
+```
+
+3. Run individual test categories:
+```sh
+# Run length conversion tests
+pytest tests/test_length.py
+
+# Run weight conversion tests
+pytest tests/test_weight.py
+
+# Run temperature conversion tests
+pytest tests/test_temperature.py
+```
+
+The test suite includes:
+- Unit tests for conversion functions
+- Integration tests for Flask routes
+- Input validation tests
+- Edge case handling
 
 ---
 ##  Project Roadmap
 
-- [X] **`Task 1`**: <strike>Implement feature one.</strike>
-- [ ] **`Task 2`**: Implement feature two.
-- [ ] **`Task 3`**: Implement feature three.
+- [x] **`Core Conversion Features`**: Implement basic unit conversion functionality
+  - [x] Length conversion (mm, cm, m, km, inch, foot, yard, mile)
+  - [x] Weight conversion (mg, g, kg, ounce, pound)
+  - [x] Temperature conversion (Celsius, Fahrenheit, Kelvin)
+
+- [x] **`User Interface`**: Create responsive web interface
+  - [x] Base template with consistent styling
+  - [x] Navigation menu
+  - [x] Conversion forms with input validation
+  - [x] Real-time result display
+
+- [ ] **`Enhanced Features`**: Add additional functionality
+  - [ ] Add more unit types (volume, area, speed, etc.)
+  - [ ] Implement automatic unit detection
+  - [ ] Add conversion history
+  - [ ] Enable bulk conversions
+
+- [ ] **`Technical Improvements`**: Enhance code quality and user experience
+  - [ ] Add comprehensive test suite
+  - [ ] Implement error handling and input validation
+  - [ ] Add API endpoints for programmatic access
+  - [ ] Optimize performance for large-scale conversions
+
+- [ ] **`Documentation & Deployment`**: Improve project documentation
+  - [ ] Add API documentation
+  - [ ] Include usage examples
+  - [ ] Create deployment guide
+  - [ ] Add contributing guidelines
 
 ---
 
