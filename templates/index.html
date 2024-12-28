@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to Unit Converter</h1>
+<p>Choose a conversion type:</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px;">
+    <a href="/length" style="text-decoration: none;">
+        <div style="background-color: #e3f2fd; padding: 20px; border-radius: 8px; text-align: center; color: #1976d2;">
+            <h2>Length</h2>
+            <p>Convert between mm, cm, m, km, inch, foot, yard, mile</p>
+        </div>
+    </a>
+    <a href="/weight" style="text-decoration: none;">
+        <div style="background-color: #e8f5e9; padding: 20px; border-radius: 8px; text-align: center; color: #2e7d32;">
+            <h2>Weight</h2>
+            <p>Convert between mg, g, kg, ounce, pound</p>
+        </div>
+    </a>
+    <a href="/temperature" style="text-decoration: none;">
+        <div style="background-color: #fce4ec; padding: 20px; border-radius: 8px; text-align: center; color: #c2185b;">
+            <h2>Temperature</h2>
+            <p>Convert between Celsius, Fahrenheit, Kelvin</p>
+        </div>
+    </a>
+</div>
+{% endblock %} 

@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Weight Converter{% endblock %}
+
+{% block content %}
+<h1>Weight Converter</h1>
+<form method="POST">
+    <div class="form-group">
+        <label for="value">Enter Value:</label>
+        <input type="number" step="any" name="value" id="value" required>
+    </div>
+    <div class="form-group">
+        <label for="from_unit">From:</label>
+        <select name="from_unit" id="from_unit" required>
+            <option value="milligram">Milligram (mg)</option>
+            <option value="gram">Gram (g)</option>
+            <option value="kilogram">Kilogram (kg)</option>
+            <option value="ounce">Ounce (oz)</option>
+            <option value="pound">Pound (lb)</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="to_unit">To:</label>
+        <select name="to_unit" id="to_unit" required>
+            <option value="milligram">Milligram (mg)</option>
+            <option value="gram">Gram (g)</option>
+            <option value="kilogram">Kilogram (kg)</option>
+            <option value="ounce">Ounce (oz)</option>
+            <option value="pound">Pound (lb)</option>
+        </select>
+    </div>
+    <button type="submit">Convert</button>
+</form>
+
+{% if result is not none %}
+<div class="result">
+    <strong>Result:</strong> {{ request.form.value }} {{ request.form.from_unit }} = {{ result }} {{ request.form.to_unit }}
+</div>
+{% endif %}
+{% endblock %} 
